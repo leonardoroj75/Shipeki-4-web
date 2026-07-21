@@ -119,7 +119,7 @@ export default function PageGaleria({ onNavigate }: PageGaleriaProps) {
             </div>
 
             <div className="p-8 flex items-center justify-between">
-              <h3 className="font-eczar font-semibold text-lg sm:text-xl text-shipeki-dark">
+              <h3 className="font-eczar font-semibold text-lg sm:text-xl text-gray-900">
                 {cat.title}
               </h3>
               <button

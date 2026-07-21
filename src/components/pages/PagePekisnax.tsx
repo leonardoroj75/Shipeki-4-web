@@ -46,7 +46,7 @@ export default function PagePekisnax({ onNavigate }: PagePekisnaxProps) {
       name: "Orejas de res deshidratadas",
       desc: "Premio masticable natural de larga duración, ideal para calmar la ansiedad por mordida destructiva.",
       price: 29900,
-      image: "https://images.unsplash.com/photo-1608454367599-c133fcabfb65?auto=format&fit=crop&q=80&w=400",
+      image: "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=600",
       tag: "Más vendido"
     },
     {
@@ -54,7 +54,7 @@ export default function PagePekisnax({ onNavigate }: PagePekisnaxProps) {
       name: "Orejas de cerdo deshidratadas",
       desc: "Sabor intensamente crujiente, sumamente ricas en proteínas de altísima absorción biológica.",
       price: 27900,
-      image: "https://images.unsplash.com/photo-1582798358481-d199fb73cd77?auto=format&fit=crop&q=80&w=400",
+      image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=600",
       tag: "Favorito del Mes"
     },
     {
@@ -62,7 +62,7 @@ export default function PagePekisnax({ onNavigate }: PagePekisnaxProps) {
       name: "Tráqueas de res deshidratadas",
       desc: "Snack cartilaginoso crujiente, repleto de condoprotectores orgánicos para la salud de sus caderas.",
       price: 32900,
-      image: "https://images.unsplash.com/photo-1541599540903-216a46ca1ad0?auto=format&fit=crop&q=80&w=400",
+      image: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&q=80&w=600",
       tag: "Salud Articular"
     },
     {
@@ -70,7 +70,7 @@ export default function PagePekisnax({ onNavigate }: PagePekisnaxProps) {
       name: "Viril de toro premium",
       desc: "Masticable duradero e hipoalergénico que mantiene ocupados y relajados a los mordedores más potentes.",
       price: 39900,
-      image: "https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&q=80&w=400",
+      image: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&q=80&w=600",
       tag: "Máxima Duración"
     },
     {
@@ -78,7 +78,7 @@ export default function PagePekisnax({ onNavigate }: PagePekisnaxProps) {
       name: "Bofe de res crujiente",
       desc: "Snack ligero, de textura aireada. Se corta fácilmente en daditos para tus sesiones de adiestramiento.",
       price: 21900,
-      image: "https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?auto=format&fit=crop&q=80&w=400",
+      image: "https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?auto=format&fit=crop&q=80&w=600",
       tag: "Ideal Adiestrar"
     }
   ];
