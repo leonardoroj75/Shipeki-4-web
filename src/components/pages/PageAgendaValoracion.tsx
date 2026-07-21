@@ -96,15 +96,13 @@ export default function PageAgendaValoracion({
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="bg-[#121214] rounded-[40px] border border-white/5 shadow-2xl p-8 sm:p-10 text-white">
-                <div className="mb-8 bg-[#1A1A1E] p-5 rounded-3xl border border-white/5 flex gap-3 items-center text-[#F277B0]">
-                  <Sparkles className="w-5 h-5 shrink-0 animate-pulse text-[#F277B0]" />
-                  <p className="text-xs sm:text-sm font-sans font-medium text-gray-300">
-                    Responde estas sencillas preguntas clínicas. Al finalizar, podrás vincular el diagnóstico inteligente al formulario de reserva de manera 100% automática.
-                  </p>
-                </div>
-                <ShipekiAssessment onSelectResult={handleLinkResult} />
+              <div className="mb-8 bg-[#F277B0]/10 p-5 rounded-2xl border border-[#F277B0]/20 flex gap-3 items-center text-[#F277B0] max-w-3xl mx-auto">
+                <Sparkles className="w-5 h-5 shrink-0 animate-pulse text-[#F277B0]" />
+                <p className="text-xs sm:text-sm font-sans font-bold text-pink-100">
+                  Responde estas sencillas preguntas clínicas. Al finalizar, podrás vincular el diagnóstico inteligente al formulario de reserva de manera 100% automática.
+                </p>
               </div>
+              <ShipekiAssessment onSelectResult={handleLinkResult} />
             </motion.div>
           )}
         </AnimatePresence>

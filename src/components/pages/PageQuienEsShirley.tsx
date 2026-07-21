@@ -6,6 +6,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Quote, Sparkles, GraduationCap, Heart, Library } from "lucide-react";
+import ShirleyWidescreenImage from "../../assets/images/shirley_hero_widescreen_1784618573939.jpg";
 
 interface PageQuienEsShirleyProps {
   onNavigate: (page: string) => void;
@@ -14,44 +15,52 @@ interface PageQuienEsShirleyProps {
 export default function PageQuienEsShirley({ onNavigate }: PageQuienEsShirleyProps) {
   return (
     <div className="w-full bg-[#0A0A0C] text-white min-h-screen relative" id="page-quien-es-shirley">
-      {/* SECCIÓN 1: HERO CON FOTO (50/50 Layout) */}
-      <section className="flex flex-col lg:flex-row min-h-[600px] items-stretch overflow-hidden">
-        {/* Left Side: 50% Image */}
-        <div className="lg:w-1/2 relative min-h-[350px] lg:min-h-auto">
+      {/* SECCIÓN 1: HERO CON FOTO (Full-bleed with Widescreen Negative Space Layout) */}
+      <section className="relative min-h-[600px] sm:min-h-[650px] lg:min-h-[720px] flex items-center overflow-hidden bg-[#0A0A0C]">
+        {/* Background Image: using object-right to keep Shirley (on the right) beautifully in frame */}
+        <div className="absolute inset-0 w-full h-full">
           <img
-            src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=800"
-            alt="Shirley con Perla y Kiara"
-            className="w-full h-full object-cover object-center absolute inset-0"
+            src={ShirleyWidescreenImage}
+            alt="Shirley Alarcón - Fundadora de Shipeki"
+            className="w-full h-full object-cover object-right md:object-right absolute inset-0"
             referrerPolicy="no-referrer"
           />
+          {/* Subtle luxurious dark gradients for supreme legibility of the overlaid light text */}
+          {/* Large screens: left-to-right gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0C] via-[#0A0A0C]/85 to-transparent hidden md:block" />
+          {/* Mobile/Tablet screens: bottom-to-top gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-[#0A0A0C]/85 to-[#0A0A0C]/25 md:hidden" />
         </div>
-        {/* Right Side: 50% Text Content */}
-        <div className="lg:w-1/2 bg-[#121214] border-l border-white/5 text-white p-8 sm:p-12 md:p-16 flex flex-col justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F277B0]/10 text-[#F277B0] border border-[#F277B0]/20 text-[11px] font-mono tracking-widest uppercase font-semibold mb-6 w-fit"
-          >
-            <Sparkles className="w-3.5 h-3.5" /> Fundadora de Shipeki
-          </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="font-display text-2xl sm:text-3xl md:text-4xl text-white font-extrabold leading-tight mb-6"
-          >
-            Shirley, fundadora de Shipeki
-          </motion.h1>
+        {/* Hero Content Overlay (Left Aligned on the Negative Space of the Composition) */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pt-36 pb-20 md:py-28 flex">
+          <div className="w-full md:w-7/12 lg:w-1/2 flex flex-col justify-center text-left">
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F277B0]/15 text-[#F277B0] border border-[#F277B0]/25 text-[11px] font-mono tracking-widest uppercase font-bold mb-6 w-fit shadow-sm shadow-[#F277B0]/5"
+            >
+              <Sparkles className="w-3.5 h-3.5 animate-pulse" /> Fundadora de Shipeki
+            </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="font-sans text-base sm:text-lg text-gray-300 leading-relaxed font-light"
-          >
-            Apasionada por el bienestar animal, educadora canina y etóloga clínica. Con años de experiencia ayudando a cientos de familias a recuperar la tranquilidad en casa, Shirley fundó Shipeki con una misión clara: transformar la educación canina a través del respeto, la ciencia y la empatía. Su enfoque combina el rigor científico de la etología clínica con una profunda sensibilidad humana, entendiendo que cada perro y cada familia tienen una historia única que merece ser escuchada y respetada.
-          </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="font-display text-3xl sm:text-4xl md:text-5xl text-white font-extrabold leading-tight mb-6"
+            >
+              Shirley, fundadora de Shipeki
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="font-sans text-base sm:text-lg text-gray-200 leading-relaxed font-normal"
+            >
+              Apasionada por el bienestar animal, educadora canina y etóloga clínica. Con años de experiencia ayudando a cientos de familias a recuperar la tranquilidad en casa, Shirley fundó Shipeki con una misión clara: transformar la educación canina a través del respeto, la ciencia y la empatía. Su enfoque combina el rigor científico de la etología clínica con una profunda sensibilidad humana, entendiendo que cada perro y cada familia tienen una historia única que merece ser escuchada y respetada.
+            </motion.p>
+          </div>
         </div>
       </section>
 

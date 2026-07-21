@@ -258,19 +258,19 @@ export default function ShipekiAssessment({ onSelectResult }: ShipekiAssessmentP
   const isOptionSelected = answers[currentQuestion.id] !== undefined;
 
   return (
-    <div className="bg-[#121214] rounded-3xl shadow-2xl overflow-hidden border border-white/5 max-w-3xl mx-auto" id="shipeki-assessment">
-      <div className="bg-[#0A0A0C] text-white px-8 py-6 flex items-center justify-between border-b border-white/5">
+    <div className="bg-white rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden border border-[#F277B0]/15 max-w-3xl mx-auto" id="shipeki-assessment">
+      <div className="bg-gray-50/80 text-[#1A1A1A] px-8 py-6 flex items-center justify-between border-b border-gray-100">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#94E07B]/10 rounded-xl border border-[#94E07B]/20 text-[#94E07B]">
+          <div className="p-2 bg-[#94E07B]/15 rounded-xl border border-[#94E07B]/20 text-[#94E07B]">
             <Dog className="w-6 h-6" />
           </div>
           <div>
-            <h3 className="font-display text-xl font-semibold tracking-wide">Test Etológico de Shipeki</h3>
-            <p className="text-xs text-gray-400 font-sans mt-0.5">Analizador conductual cognitivo-emocional</p>
+            <h3 className="font-display text-xl font-bold tracking-wide">Test Etológico de Shipeki</h3>
+            <p className="text-xs text-gray-500 font-sans mt-0.5">Analizador conductual cognitivo-emocional</p>
           </div>
         </div>
         {!showResult && (
-          <div className="text-xs bg-[#F277B0]/10 text-[#F277B0] border border-[#F277B0]/20 px-3 py-1.5 rounded-full font-mono">
+          <div className="text-xs bg-[#F277B0]/10 text-[#F277B0] border border-[#F277B0]/25 px-3 py-1.5 rounded-full font-mono font-bold">
             Pregunta {currentStep + 1} de {QUESTIONS.length}
           </div>
         )}
@@ -287,14 +287,14 @@ export default function ShipekiAssessment({ onSelectResult }: ShipekiAssessmentP
               transition={{ duration: 0.3 }}
             >
               {/* Progress bar */}
-              <div className="w-full bg-white/5 h-1.5 rounded-full mb-8 overflow-hidden">
+              <div className="w-full bg-gray-100 h-1.5 rounded-full mb-8 overflow-hidden">
                 <div
                   className="bg-[#F277B0] h-full transition-all duration-300 ease-out"
                   style={{ width: `${((currentStep + 1) / QUESTIONS.length) * 100}%` }}
                 />
               </div>
 
-              <h4 className="font-display text-xl md:text-2xl text-white font-medium leading-relaxed mb-6">
+              <h4 className="font-display text-xl md:text-2xl text-[#1A1A1A] font-extrabold leading-relaxed mb-6">
                 {currentQuestion.text}
               </h4>
 
@@ -308,29 +308,29 @@ export default function ShipekiAssessment({ onSelectResult }: ShipekiAssessmentP
                       className={`text-left p-5 rounded-2xl border transition-all duration-300 relative overflow-hidden group cursor-pointer ${
                         isSelected
                           ? "border-[#F277B0] bg-[#F277B0]/5 shadow-md shadow-[#F277B0]/5"
-                          : "border-white/5 bg-[#1A1A1E] hover:border-white/15 hover:bg-[#202024]"
+                          : "border-gray-200 bg-gray-50/50 hover:border-gray-300 hover:bg-gray-100/50"
                       }`}
                     >
                       {isSelected && (
-                        <div className="absolute top-0 right-0 w-3 h-3 bg-[#F277B0] rounded-bl-lg" />
+                        <div className="absolute top-0 right-0 w-3 h-3 bg-[#F277B0]" />
                       )}
                       <div className="flex gap-4 items-start">
                         <div
                           className={`w-6 h-6 rounded-full border flex items-center justify-center shrink-0 mt-0.5 transition-colors ${
                             isSelected
                               ? "border-[#F277B0] bg-[#F277B0] text-white"
-                              : "border-white/10 group-hover:border-white/25"
+                              : "border-gray-300 bg-white group-hover:border-gray-400"
                           }`}
                         >
-                          {isSelected && <span className="w-2.5 h-2.5 bg-[#0A0A0C] rounded-full" />}
+                          {isSelected && <span className="w-2 h-2 bg-white rounded-full" />}
                         </div>
                         <div>
-                          <p className={`font-sans font-medium text-sm md:text-base ${
-                            isSelected ? "text-[#94E07B]" : "text-gray-200"
+                          <p className={`font-sans font-bold text-sm md:text-base ${
+                            isSelected ? "text-[#F277B0]" : "text-[#1A1A1A]"
                           }`}>
                             {option.text}
                           </p>
-                          <p className="text-xs text-gray-400 font-sans mt-1 leading-relaxed">
+                          <p className="text-xs text-gray-500 font-sans mt-1 leading-relaxed">
                             {option.description}
                           </p>
                         </div>
@@ -340,14 +340,14 @@ export default function ShipekiAssessment({ onSelectResult }: ShipekiAssessmentP
                 })}
               </div>
 
-              <div className="flex items-center justify-between pt-4 border-t border-white/5">
+              <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                 <button
                   onClick={handlePrev}
                   disabled={currentStep === 0}
-                  className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium font-sans transition-all cursor-pointer ${
+                  className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold font-sans transition-all cursor-pointer ${
                     currentStep === 0
-                      ? "text-gray-700 cursor-not-allowed"
-                      : "text-gray-300 hover:text-white hover:bg-white/5"
+                      ? "text-gray-300 cursor-not-allowed"
+                      : "text-gray-600 hover:text-[#1A1A1A] hover:bg-gray-50 border border-gray-200"
                   }`}
                 >
                   <ArrowLeft className="w-4 h-4" /> Anterior
@@ -358,8 +358,8 @@ export default function ShipekiAssessment({ onSelectResult }: ShipekiAssessmentP
                   disabled={!isOptionSelected}
                   className={`flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-black font-display tracking-wider uppercase transition-all cursor-pointer ${
                     isOptionSelected
-                      ? "bg-[#94E07B] text-[#0A0A0C] hover:bg-[#94E07B]/95 shadow-md shadow-[#94E07B]/10"
-                      : "bg-white/5 text-gray-500 cursor-not-allowed"
+                      ? "bg-[#94E07B] text-[#0A0A0C] hover:bg-[#94E07B]/95 shadow-lg shadow-[#94E07B]/10"
+                      : "bg-gray-100 text-gray-400 cursor-not-allowed"
                   }`}
                 >
                   {currentStep === QUESTIONS.length - 1 ? (
@@ -382,38 +382,38 @@ export default function ShipekiAssessment({ onSelectResult }: ShipekiAssessmentP
               className="text-left"
             >
               <div className="flex flex-col items-center text-center mb-8">
-                <div className="w-16 h-16 bg-[#94E07B]/10 text-[#94E07B] rounded-full flex items-center justify-center border border-[#94E07B]/20 mb-4 animate-bounce">
+                <div className="w-16 h-16 bg-[#94E07B]/15 text-[#94E07B] rounded-full flex items-center justify-center border border-[#94E07B]/20 mb-4">
                   <Award className="w-8 h-8" />
                 </div>
                 <span className="text-xs font-mono tracking-widest text-[#F277B0] uppercase font-semibold">
                   Diagnóstico Etológico Preliminar
                 </span>
-                <h3 className="font-display text-3xl md:text-4xl text-white font-bold mt-2">
+                <h3 className="font-display text-3xl md:text-4xl text-[#1A1A1A] font-extrabold mt-2">
                   {calculatedProfile?.title}
                 </h3>
-                <p className="text-sm text-gray-400 font-sans italic mt-1 max-w-lg">
+                <p className="text-sm text-gray-500 font-sans italic mt-1 max-w-lg">
                   "{calculatedProfile?.subtitle}"
                 </p>
               </div>
 
               <div className="space-y-6">
-                <div className="p-6 bg-[#1E1E22] rounded-2xl border border-white/5">
-                  <h5 className="font-display font-semibold text-lg text-white mb-2.5">
+                <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                  <h5 className="font-display font-bold text-lg text-[#1A1A1A] mb-2.5">
                     Análisis Conductual
                   </h5>
-                  <p className="text-sm text-gray-300 leading-relaxed font-sans">
+                  <p className="text-sm text-gray-600 leading-relaxed font-sans">
                     {calculatedProfile?.description}
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="p-6 bg-emerald-950/10 rounded-2xl border border-emerald-500/20">
-                    <h5 className="font-sans font-bold text-sm uppercase tracking-wider text-emerald-400 mb-3 flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-emerald-400" /> Fortalezas Clave
+                  <div className="p-6 bg-emerald-50 rounded-2xl border border-emerald-100">
+                    <h5 className="font-sans font-bold text-sm uppercase tracking-wider text-emerald-700 mb-3 flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-emerald-600" /> Fortalezas Clave
                     </h5>
                     <ul className="space-y-2">
                       {calculatedProfile?.strengths.map((str, idx) => (
-                        <li key={idx} className="text-xs text-gray-300 font-sans flex items-start gap-2.5 leading-relaxed">
+                        <li key={idx} className="text-xs text-gray-600 font-sans flex items-start gap-2.5 leading-relaxed">
                           <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full shrink-0 mt-1.5" />
                           <span>{str}</span>
                         </li>
@@ -421,13 +421,13 @@ export default function ShipekiAssessment({ onSelectResult }: ShipekiAssessmentP
                     </ul>
                   </div>
 
-                  <div className="p-6 bg-amber-950/10 rounded-2xl border border-amber-500/20">
-                    <h5 className="font-sans font-bold text-sm uppercase tracking-wider text-amber-400 mb-3 flex items-center gap-2">
-                      <AlertTriangle className="w-4 h-4 text-amber-400" /> Áreas de Trabajo
+                  <div className="p-6 bg-amber-50 rounded-2xl border border-amber-100">
+                    <h5 className="font-sans font-bold text-sm uppercase tracking-wider text-amber-700 mb-3 flex items-center gap-2">
+                      <AlertTriangle className="w-4 h-4 text-amber-600" /> Áreas de Trabajo
                     </h5>
                     <ul className="space-y-2">
                       {calculatedProfile?.challenges.map((cha, idx) => (
-                        <li key={idx} className="text-xs text-gray-300 font-sans flex items-start gap-2.5 leading-relaxed">
+                        <li key={idx} className="text-xs text-gray-600 font-sans flex items-start gap-2.5 leading-relaxed">
                           <span className="w-1.5 h-1.5 bg-amber-500 rounded-full shrink-0 mt-1.5" />
                           <span>{cha}</span>
                         </li>
@@ -436,18 +436,18 @@ export default function ShipekiAssessment({ onSelectResult }: ShipekiAssessmentP
                   </div>
                 </div>
 
-                <div className="p-6 bg-gradient-to-r from-[#F277B0]/5 to-transparent rounded-2xl border border-white/5">
-                  <h5 className="font-display font-semibold text-lg text-white mb-2">
+                <div className="p-6 bg-gradient-to-r from-[#F277B0]/5 to-transparent rounded-2xl border border-gray-100">
+                  <h5 className="font-display font-bold text-lg text-[#1A1A1A] mb-2">
                     Recomendación de Nuestro Experto
                   </h5>
-                  <p className="text-sm text-gray-300 leading-relaxed font-sans mb-4">
+                  <p className="text-sm text-gray-600 leading-relaxed font-sans mb-4">
                     {calculatedProfile?.recommendation}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {calculatedProfile?.recommendedServices.map((service, idx) => (
                       <span
                         key={idx}
-                        className="text-xs font-medium font-sans bg-[#F277B0]/10 text-[#F277B0] px-3 py-1.5 rounded-full border border-[#F277B0]/20"
+                        className="text-xs font-bold font-sans bg-[#F277B0]/10 text-[#F277B0] px-3 py-1.5 rounded-full border border-[#F277B0]/20"
                       >
                         {service}
                       </span>
@@ -456,10 +456,10 @@ export default function ShipekiAssessment({ onSelectResult }: ShipekiAssessmentP
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-center gap-4 mt-10 pt-6 border-t border-white/5">
+              <div className="flex flex-col sm:flex-row items-center gap-4 mt-10 pt-6 border-t border-gray-100">
                 <button
                   onClick={resetTest}
-                  className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl text-sm font-medium font-sans transition-all cursor-pointer"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 border border-gray-200 text-gray-600 hover:text-[#1A1A1A] hover:bg-gray-50 rounded-xl text-sm font-bold font-sans transition-all cursor-pointer"
                 >
                   <RefreshCw className="w-4 h-4" /> Repetir Test
                 </button>
