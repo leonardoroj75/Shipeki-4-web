@@ -8,6 +8,8 @@ import { motion } from "motion/react";
 import { LogOut, Home, Compass, ShieldAlert, MessagesSquare, Flame, Sparkles, ArrowRight } from "lucide-react";
 // @ts-ignore
 import heroImage from "../../assets/images/shipeki_hero_banner_1783696515998.jpg";
+// @ts-ignore
+import problemDogImage from "../../assets/images/regenerated_image_1784618900461.png";
 
 interface PageProblemaProps {
   onNavigate: (page: string) => void;
@@ -108,7 +110,7 @@ export default function PageProblema({ onNavigate }: PageProblemaProps) {
             {/* The Central Dog Image */}
             <div className="w-full max-w-[340px] h-[340px] sm:h-[400px] rounded-full overflow-hidden border-8 border-white shadow-2xl relative">
               <img
-                src={heroImage}
+                src={problemDogImage}
                 alt="Perro pensativo pidiendo comprensión"
                 className="w-full h-full object-cover object-center grayscale-[20%] scale-105 hover:scale-110 transition-transform duration-700"
               />

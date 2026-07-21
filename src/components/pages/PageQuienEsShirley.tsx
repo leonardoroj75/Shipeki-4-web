@@ -6,7 +6,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Quote, Sparkles, GraduationCap, Heart, Library } from "lucide-react";
-import ShirleyWidescreenImage from "../../assets/images/shirley_hero_widescreen_1784618573939.jpg";
+import ShirleyWidescreenImage from "../../assets/images/regenerated_image_1784618967590.png";
 
 interface PageQuienEsShirleyProps {
   onNavigate: (page: string) => void;
