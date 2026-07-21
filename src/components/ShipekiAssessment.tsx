@@ -265,7 +265,7 @@ export default function ShipekiAssessment({ onSelectResult }: ShipekiAssessmentP
             <Dog className="w-6 h-6" />
           </div>
           <div>
-            <h3 className="font-display text-xl font-semibold tracking-wide">Test Etológico de Chipeki</h3>
+            <h3 className="font-display text-xl font-semibold tracking-wide">Test Etológico de Shipeki</h3>
             <p className="text-xs text-gray-400 font-sans mt-0.5">Analizador conductual cognitivo-emocional</p>
           </div>
         </div>

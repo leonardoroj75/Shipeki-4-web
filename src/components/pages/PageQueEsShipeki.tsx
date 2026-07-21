@@ -286,7 +286,7 @@ export default function PageQueEsShipeki({ onNavigate }: PageQueEsShipekiProps) 
         </div>
       </section>
 
-      {/* SECCIÓN 3: EL ENFOQUE CHIPEKI (4 Tarjetas Orgánicas) */}
+      {/* SECCIÓN 3: EL ENFOQUE SHIPEKI (4 Tarjetas Orgánicas) */}
       <section className="bg-[#0C120D] py-24 px-6 rounded-b-[40px] md:rounded-b-[80px] border-b border-white/5 relative">
         <div className="max-w-7xl mx-auto">
           

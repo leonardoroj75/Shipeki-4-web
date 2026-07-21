@@ -52,7 +52,7 @@ export default function PageFaqs({ onNavigate }: PageFaqsProps) {
         <span className="text-xs font-mono text-[#F277B0] tracking-widest uppercase font-semibold block mb-2">
           Soporte y Respuestas
         </span>
-        <h1 className="font-eczar text-3xl sm:text-4xl md:text-[42px] text-shipeki-dark font-semibold leading-tight">
+        <h1 className="font-eczar text-3xl sm:text-4xl md:text-[42px] text-gray-900 font-semibold leading-tight">
           Resolvemos tus dudas
         </h1>
         <div className="w-16 h-1 bg-[#F277B0] mx-auto mt-4" />
@@ -68,7 +68,7 @@ export default function PageFaqs({ onNavigate }: PageFaqsProps) {
               className={`rounded-3xl border transition-all overflow-hidden ${
                 isOpen
                   ? "bg-[#F3A0BE] border-[#F277B0] shadow-sm text-white"
-                  : "bg-white border-gray-100 hover:border-pink-200 text-shipeki-dark shadow-xs"
+                  : "bg-white border-gray-100 hover:border-pink-200 text-gray-900 shadow-xs"
               }`}
             >
               {/* Trigger */}
@@ -115,7 +115,7 @@ export default function PageFaqs({ onNavigate }: PageFaqsProps) {
         <div className="w-12 h-12 rounded-full bg-pink-50 text-[#F277B0] flex items-center justify-center mx-auto mb-4">
           <MessagesSquare className="w-5 h-5" />
         </div>
-        <h4 className="font-eczar font-semibold text-lg text-shipeki-dark">¿Tienes otra pregunta?</h4>
+        <h4 className="font-eczar font-semibold text-lg text-gray-900">¿Tienes otra pregunta?</h4>
         <p className="text-xs text-gray-500 font-sans mt-1">Nuestros etólogos y especialistas están disponibles para charlar.</p>
         <button
           onClick={() => onNavigate("agenda")}

@@ -17,6 +17,10 @@ export default function PagePekisnax({ onNavigate }: PagePekisnaxProps) {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [showCheckoutSuccess, setShowCheckoutSuccess] = useState(false);
 
+  const formatPrice = (val: number) => {
+    return `$${val.toLocaleString("es-CO")}`;
+  };
+
   const benefits = [
     {
       title: "100% Monoproteicos",
@@ -41,7 +45,7 @@ export default function PagePekisnax({ onNavigate }: PagePekisnaxProps) {
       id: "orejas_res",
       name: "Orejas de res deshidratadas",
       desc: "Premio masticable natural de larga duración, ideal para calmar la ansiedad por mordida destructiva.",
-      price: 7.50,
+      price: 29900,
       image: "https://images.unsplash.com/photo-1608454367599-c133fcabfb65?auto=format&fit=crop&q=80&w=400",
       tag: "Más vendido"
     },
@@ -49,7 +53,7 @@ export default function PagePekisnax({ onNavigate }: PagePekisnaxProps) {
       id: "orejas_cerdo",
       name: "Orejas de cerdo deshidratadas",
       desc: "Sabor intensamente crujiente, sumamente ricas en proteínas de altísima absorción biológica.",
-      price: 6.90,
+      price: 27900,
       image: "https://images.unsplash.com/photo-1582798358481-d199fb73cd77?auto=format&fit=crop&q=80&w=400",
       tag: "Favorito del Mes"
     },
@@ -57,7 +61,7 @@ export default function PagePekisnax({ onNavigate }: PagePekisnaxProps) {
       id: "traqueas_res",
       name: "Tráqueas de res deshidratadas",
       desc: "Snack cartilaginoso crujiente, repleto de condoprotectores orgánicos para la salud de sus caderas.",
-      price: 8.20,
+      price: 32900,
       image: "https://images.unsplash.com/photo-1541599540903-216a46ca1ad0?auto=format&fit=crop&q=80&w=400",
       tag: "Salud Articular"
     },
@@ -65,7 +69,7 @@ export default function PagePekisnax({ onNavigate }: PagePekisnaxProps) {
       id: "viril_toro",
       name: "Viril de toro premium",
       desc: "Masticable duradero e hipoalergénico que mantiene ocupados y relajados a los mordedores más potentes.",
-      price: 9.80,
+      price: 39900,
       image: "https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&q=80&w=400",
       tag: "Máxima Duración"
     },
@@ -73,7 +77,7 @@ export default function PagePekisnax({ onNavigate }: PagePekisnaxProps) {
       id: "bofe_desh",
       name: "Bofe de res crujiente",
       desc: "Snack ligero, de textura aireada. Se corta fácilmente en daditos para tus sesiones de adiestramiento.",
-      price: 5.40,
+      price: 21900,
       image: "https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?auto=format&fit=crop&q=80&w=400",
       tag: "Ideal Adiestrar"
     }
@@ -211,7 +215,7 @@ export default function PagePekisnax({ onNavigate }: PagePekisnaxProps) {
 
               <div className="p-6 pt-0 flex items-center justify-between">
                 <span className="font-display text-lg font-black text-[#94E07B]">
-                  {p.price.toFixed(2)} €
+                  {formatPrice(p.price)}
                 </span>
                 <button
                   onClick={() => addToCart(p.id)}
@@ -300,7 +304,7 @@ export default function PagePekisnax({ onNavigate }: PagePekisnaxProps) {
                           </div>
                           <div>
                             <h4 className="font-display font-bold text-xs text-white line-clamp-1">{prod.name}</h4>
-                            <p className="font-display text-xs text-[#94E07B] font-semibold mt-0.5">{prod.price.toFixed(2)} €</p>
+                            <p className="font-display text-xs text-[#94E07B] font-semibold mt-0.5">{formatPrice(prod.price)}</p>
                           </div>
                         </div>
 
@@ -331,7 +335,7 @@ export default function PagePekisnax({ onNavigate }: PagePekisnaxProps) {
                 <div className="p-6 border-t border-white/5 bg-[#0C120D] space-y-4">
                   <div className="flex justify-between items-center text-xs">
                     <span className="font-sans text-gray-400 font-medium">Subtotal</span>
-                    <span className="font-mono font-bold text-gray-300">{cartTotal.toFixed(2)} €</span>
+                    <span className="font-mono font-bold text-gray-300">{formatPrice(cartTotal)}</span>
                   </div>
                   <div className="flex justify-between items-center text-xs">
                     <span className="font-sans text-gray-400 font-medium">Envío Express</span>
@@ -339,7 +343,7 @@ export default function PagePekisnax({ onNavigate }: PagePekisnaxProps) {
                   </div>
                   <div className="flex justify-between items-center text-sm border-t border-white/5 pt-4">
                     <span className="font-display font-extrabold text-white">Total</span>
-                    <span className="font-mono font-black text-lg text-[#94E07B]">{cartTotal.toFixed(2)} €</span>
+                    <span className="font-mono font-black text-lg text-[#94E07B]">{formatPrice(cartTotal)}</span>
                   </div>
 
                   <button

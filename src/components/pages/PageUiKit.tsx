@@ -33,7 +33,7 @@ export default function PageUiKit() {
           Documentación UX/UI v2.0
         </span>
         <h1 className="font-display text-4xl sm:text-5xl font-extrabold text-[#1A1A1A] leading-tight">
-          Chipeki UI Kit & Mockups
+          Shipeki UI Kit & Mockups
         </h1>
         <p className="font-sans text-base sm:text-lg text-gray-500 max-w-3xl mx-auto mt-4 leading-relaxed">
           Diseño conceptual bajo la premisa <strong>"El Arte de Entender"</strong>. Sin líneas duras corporativas, abundante espacio para respirar, tipografías elegantes y micro-interacciones lúdicas.
@@ -87,7 +87,7 @@ export default function PageUiKit() {
         <section className="bg-white rounded-[40px] p-8 sm:p-12 shadow-[0px_20px_40px_-20px_rgba(26,26,26,0.08)] border border-pink-100/10">
           <div className="mb-10">
             <span className="text-xs font-mono text-[#F277B0] tracking-widest uppercase font-bold block mb-1">02 / Tipografías</span>
-            <h2 className="font-display text-2xl font-extrabold text-[#1A1A1A]">La Voz Visual de Chipeki</h2>
+            <h2 className="font-display text-2xl font-extrabold text-[#1A1A1A]">La Voz Visual de Shipeki</h2>
             <p className="text-sm text-gray-400 font-sans mt-1">Una combinación editorial, moderna, humana y sumamente legible.</p>
           </div>
 
@@ -213,7 +213,7 @@ export default function PageUiKit() {
                     Asociación controlada con perros mentores equilibrados para modelar conductas asertivas.
                   </p>
                 </div>
-                <span className="text-[10px] font-mono text-[#F277B0] font-bold uppercase tracking-wider mt-4">Chipeki · Dimensión 02</span>
+                <span className="text-[10px] font-mono text-[#F277B0] font-bold uppercase tracking-wider mt-4">Shipeki · Dimensión 02</span>
               </div>
             </div>
 
@@ -227,7 +227,7 @@ export default function PageUiKit() {
                   <Sparkles className="w-4 h-4 text-amber-400/80 animate-pulse" />
                 </div>
                 
-                <p className="font-serif italic text-sm text-gray-700 leading-relaxed my-4">
+                <p className="font-serif italic text-sm text-gray-200 leading-relaxed my-4">
                   "El problema no es que tu perro sea 'terco' o dominante. Simplemente está gritando su malestar o incomprensión de la única forma que conoce."
                 </p>
 

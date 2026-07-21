@@ -67,7 +67,7 @@ export default function PageBlog({ onNavigate }: PageBlogProps) {
         <span className="text-xs font-mono text-[#F277B0] tracking-widest uppercase font-semibold block mb-2">
           Biblioteca de Conocimiento
         </span>
-        <h1 className="font-eczar text-3xl sm:text-4xl md:text-[42px] text-shipeki-dark font-semibold leading-tight">
+        <h1 className="font-eczar text-3xl sm:text-4xl md:text-[42px] text-[#1A1A1A] font-semibold leading-tight">
           Aprender para comprender. Comprender para transformar.
         </h1>
         <p className="font-eczar text-base sm:text-lg text-gray-500 leading-relaxed max-w-3xl mx-auto mt-4 font-light">
@@ -93,7 +93,7 @@ export default function PageBlog({ onNavigate }: PageBlogProps) {
                 <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0">
                   <img src={cat.image} alt={cat.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
                 </div>
-                <h3 className="font-eczar font-semibold text-base sm:text-lg text-shipeki-dark group-hover:text-[#F277B0] transition-colors">
+                <h3 className="font-eczar font-semibold text-base sm:text-lg text-[#1A1A1A] group-hover:text-[#F277B0] transition-colors">
                   {cat.title}
                 </h3>
               </div>
@@ -105,7 +105,7 @@ export default function PageBlog({ onNavigate }: PageBlogProps) {
       {/* SECCIÓN 3: ARTÍCULOS DESTACADOS */}
       <section className="py-24 px-4 max-w-5xl mx-auto">
         <div className="mb-12 flex justify-between items-center">
-          <h2 className="font-eczar text-2xl sm:text-3xl text-shipeki-dark font-semibold">Artículos Recomendados</h2>
+          <h2 className="font-eczar text-2xl sm:text-3xl text-[#1A1A1A] font-semibold">Artículos Recomendados</h2>
           <span className="text-xs font-mono font-bold text-[#F277B0] uppercase flex items-center gap-1.5"><BookOpen className="w-4 h-4" /> Lecturas de 5 min</span>
         </div>
 
@@ -120,7 +120,7 @@ export default function PageBlog({ onNavigate }: PageBlogProps) {
                 <img src={art.image} alt={art.title} className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300" />
               </div>
               <div className="flex-1">
-                <h3 className="font-eczar font-semibold text-xl text-shipeki-dark group-hover:text-[#F277B0] transition-colors mb-3 leading-snug">
+                <h3 className="font-eczar font-semibold text-xl text-[#1A1A1A] group-hover:text-[#F277B0] transition-colors mb-3 leading-snug">
                   {art.title}
                 </h3>
                 <p className="font-eczar text-sm text-gray-500 leading-relaxed font-light mb-4 line-clamp-2">
@@ -157,7 +157,7 @@ export default function PageBlog({ onNavigate }: PageBlogProps) {
                   placeholder="Tu correo electrónico"
                   value={emailInput}
                   onChange={(e) => setEmailInput(e.target.value)}
-                  className="flex-1 bg-white border border-transparent rounded-[50px] px-6 py-4 text-shipeki-dark text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F277B0]"
+                  className="flex-1 bg-white border border-transparent rounded-[50px] px-6 py-4 text-[#1A1A1A] text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F277B0]"
                 />
                 <button
                   type="submit"
@@ -204,7 +204,7 @@ export default function PageBlog({ onNavigate }: PageBlogProps) {
               {/* Close Button */}
               <button
                 onClick={() => setSelectedArticle(null)}
-                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/85 hover:bg-white text-shipeki-dark flex items-center justify-center shadow-md border border-gray-100 transition-colors"
+                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/85 hover:bg-white text-[#1A1A1A] flex items-center justify-center shadow-md border border-gray-100 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
