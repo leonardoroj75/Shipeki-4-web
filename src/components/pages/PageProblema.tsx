@@ -128,7 +128,7 @@ export default function PageProblema({ onNavigate }: PageProblemaProps) {
               <div className="absolute top-2 right-2 text-yellow-500/30">
                 <Sparkles className="w-6 h-6 animate-pulse" />
               </div>
-              <p className="font-serif italic text-sm text-gray-700 leading-relaxed">
+              <p className="font-serif italic text-sm text-gray-100 leading-relaxed">
                 "El comportamiento de tu perro es solo el síntoma de cómo se siente por dentro. Castigar el comportamiento sin entender la emoción que lo causa no solo no resuelve el problema, sino que destruye la confianza que tiene en ti."
               </p>
               <span className="text-[9px] font-mono font-bold text-[#F277B0] tracking-widest uppercase block mt-3">
