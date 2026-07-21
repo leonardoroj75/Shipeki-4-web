@@ -1,0 +1,8 @@
+{
+  "name": "Chipeki",
+  "description": "Centro etológico canino de lujo y desarrollo integral enfocado en el bienestar, la educación respetuosa y la conexión familiar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
