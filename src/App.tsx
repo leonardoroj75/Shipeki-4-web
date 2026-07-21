@@ -36,6 +36,7 @@ import PageGaleria from "./components/pages/PageGaleria";
 import PageFaqs from "./components/pages/PageFaqs";
 import PageAgendaValoracion from "./components/pages/PageAgendaValoracion";
 import PageUiKit from "./components/pages/PageUiKit";
+import shipekiLogo from "./assets/images/shipeki_logo_1784614122822.jpg";
 
 export default function App() {
   const [activePage, setActivePage] = useState<string>("home");
@@ -71,7 +72,7 @@ export default function App() {
   const pagesMap: Record<string, string> = {
     home: "Inicio",
     problema: "El Problema",
-    shipeki: "¿Qué es Chipeki?",
+    shipeki: "¿Qué es Shipeki?",
     metodologia: "Metodología",
     servicios: "Servicios",
     profeludos: "Profeludos",
@@ -136,17 +137,22 @@ export default function App() {
           {/* Brand Logo */}
           <button 
             onClick={() => setActivePage("home")} 
-            className="flex items-center gap-2.5 group focus:outline-none cursor-pointer"
+            className="flex items-center gap-3 group focus:outline-none cursor-pointer"
           >
-            <div className="w-10 h-10 rounded-full bg-[#94E07B] flex items-center justify-center text-[#0A0A0C] shadow-md shadow-[#94E07B]/20 group-hover:scale-105 transition-transform">
-              <span className="font-display font-black text-lg">C</span>
+            <div className="w-12 h-12 rounded-full overflow-hidden border border-white/10 p-0.5 bg-white shadow-md shadow-[#94E07B]/20 group-hover:scale-105 transition-transform">
+              <img
+                src={shipekiLogo}
+                alt="Shipeki Logo"
+                className="w-full h-full object-contain rounded-full"
+                referrerPolicy="no-referrer"
+              />
             </div>
             <div className="text-left">
               <span className="font-display text-2xl font-black tracking-tight text-white group-hover:text-[#94E07B] transition-colors block leading-none">
-                Chipeki
+                Shipeki
               </span>
-              <span className="text-[9px] font-mono font-bold tracking-widest text-[#94E07B] uppercase block mt-0.5">
-                Desarrollo Canino
+              <span className="text-[9px] font-mono font-bold tracking-widest text-[#94E07B] uppercase block mt-1">
+                Centro de Desarrollo Canino
               </span>
             </div>
           </button>
@@ -193,7 +199,7 @@ export default function App() {
                         }}
                         className="w-full text-left p-3 text-xs font-display font-bold uppercase tracking-wider text-gray-300 hover:text-[#94E07B] hover:bg-white/5 rounded-xl transition-all cursor-pointer"
                       >
-                        ¿Qué es Chipeki?
+                        ¿Qué es Shipeki?
                       </button>
                       <button
                         onClick={() => {
@@ -425,7 +431,7 @@ export default function App() {
               </div>
               <div className="flex gap-3 items-center">
                 <Mail className="w-5 h-5 text-[#F277B0] shrink-0" />
-                <span>hola@chipeki.com · info@chipeki.com</span>
+                <span>hola@shipeki.com · info@shipeki.com</span>
               </div>
             </div>
           </div>
@@ -437,7 +443,7 @@ export default function App() {
             </h4>
             <div className="grid grid-cols-2 gap-2 font-display text-xs font-bold uppercase tracking-wider">
               <button onClick={() => setActivePage("home")} className="text-left text-gray-400 hover:text-[#94E07B] transition-colors cursor-pointer">Inicio</button>
-              <button onClick={() => setActivePage("shipeki")} className="text-left text-gray-400 hover:text-[#94E07B] transition-colors cursor-pointer">¿Qué es Chipeki?</button>
+              <button onClick={() => setActivePage("shipeki")} className="text-left text-gray-400 hover:text-[#94E07B] transition-colors cursor-pointer">¿Qué es Shipeki?</button>
               <button onClick={() => setActivePage("metodologia")} className="text-left text-gray-400 hover:text-[#94E07B] transition-colors cursor-pointer">Metodología</button>
               <button onClick={() => setActivePage("servicios")} className="text-left text-gray-400 hover:text-[#94E07B] transition-colors cursor-pointer">Servicios</button>
               <button onClick={() => setActivePage("profeludos")} className="text-left text-gray-400 hover:text-[#94E07B] transition-colors cursor-pointer">Profeludos</button>
@@ -485,7 +491,7 @@ export default function App() {
                 <span>Domingos: Cerrado (Terapia interna)</span>
               </div>
               <div className="pt-2 border-t border-gray-900 text-[10px] text-gray-500">
-                <span>© 2026 Chipeki Inc. Todos los derechos reservados. <br />Política de Privacidad · Términos de Servicio</span>
+                <span>© 2026 Shipeki Inc. Todos los derechos reservados. <br />Política de Privacidad · Términos de Servicio</span>
               </div>
             </div>
           </div>
@@ -495,7 +501,7 @@ export default function App() {
         {/* Closing Phrase */}
         <div className="max-w-7xl mx-auto px-4 pt-8 border-t border-gray-900 text-center">
           <p className="font-serif text-base text-gray-400 italic max-w-xl mx-auto leading-relaxed">
-            “Chipeki no es un lugar donde enseñamos órdenes. Es un lugar donde ayudamos a las familias a comprender a sus perros.”
+            “Shipeki no es un lugar donde enseñamos órdenes. Es un lugar donde ayudamos a las familias a comprender a sus perros.”
           </p>
         </div>
       </footer>

@@ -8,6 +8,8 @@ import { motion } from "motion/react";
 import { Sparkles, ArrowRight, ShieldCheck, Heart, Brain, Award, Users, Smile, Compass, CheckCircle } from "lucide-react";
 // @ts-ignore
 import heroImage from "../../assets/images/shipeki_hero_banner_1783696515998.jpg";
+// @ts-ignore
+import shipekiLogo from "../../assets/images/shipeki_logo_1784614122822.jpg";
 
 interface PageHomeProps {
   onNavigate: (page: string) => void;
@@ -38,6 +40,24 @@ export default function PageHome({ onNavigate }: PageHomeProps) {
         {/* Content Container with extreme whitespace */}
         <div className="relative z-30 max-w-6xl mx-auto px-6 text-center py-24 flex flex-col items-center">
           
+          {/* Circular Shipeki Logo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mb-8 relative group"
+          >
+            <div className="absolute inset-0 bg-[#94E07B]/15 rounded-full blur-xl animate-pulse" />
+            <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full border-2 border-white/10 p-1 bg-white shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:rotate-3">
+              <img
+                src={shipekiLogo}
+                alt="Shipeki Centro de Desarrollo Canino Logo"
+                className="w-full h-full object-contain rounded-full select-none"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </motion.div>
+
           {/* Sparkly Tag */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
